@@ -32,8 +32,8 @@ class Server(ImageSender):
         self.log('Сравнение оригинала с восстановленным изображением')
         self.compare_images(self.original_image, self.image_without_noise)
 
-        cv2.imwrite('result.jpg', self.image_without_noise)
-        cv2.imwrite('noise.jpg', self.image_with_noise)
+        cv2.imwrite('images/result.jpg', self.image_without_noise)
+        cv2.imwrite('images/noise.jpg', self.image_with_noise)
 
     def compare_images(self, image1, image2):
         diff = (image1 - image2).astype('float32')

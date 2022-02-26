@@ -21,6 +21,6 @@ class Client(ImageSender):
 
 
 if __name__ == '__main__':
-    img = cv2.imread('original.jpg')
+    img = cv2.imread('images/original.jpg')
     client = Client(host='127.0.0.1', server_port=1000, image=img)
     client.start()
